@@ -1,0 +1,60 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Listing</title>
+    <link rel="stylesheet" href="a.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1><a href="b.html">Real Estate Listing</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="listings.html">Listings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="home-introduction">
+                <h2>Welcome to Real Estate Listing</h2>
+                <p>Discover your dream home with us. We offer a wide range of properties, from beachfront getaways to city apartments. Whether you're buying, selling, or renting, we're here to help you find the perfect property.</p>
+                <p>Counter: {{ counter }}</p>
+                <button @click="incrementCounter">Increment Counter</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Real Estate Company</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    counter: 0
+                };
+            },
+            methods: {
+                incrementCounter() {
+                    this.counter++;
+                }
+            }
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+</html>
+
+
+
